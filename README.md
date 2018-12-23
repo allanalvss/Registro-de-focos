@@ -13,4 +13,6 @@ Ademais, o aplicação apresenta uma janela para estatísticas, na qual são apr
 
 Os dados necessários para a aplicação são o nome do bairro e número de focos registrados naquele local. É necessário preencher os labels (Bairro e Quantidade de Focos).E logo após isso o botão inserir irá atualializar a tabela e classificar o nível de risco de cada bairro cadastrado.
 
+![](figuras/label.png)
+
 
