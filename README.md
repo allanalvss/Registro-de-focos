@@ -11,8 +11,11 @@ Ademais, o aplicação apresenta uma janela para estatísticas, na qual são apr
 
 # Inserção dos dados
 
-Os dados necessários para a aplicação são o nome do bairro e número de focos registrados naquele local. É necessário preencher os labels (Bairro e Quantidade de Focos).E logo após isso o botão inserir irá atualializar a tabela e classificar o nível de risco de cada bairro cadastrado.
+Os dados necessários para a aplicação são o nome do bairro e número de focos registrados naquele local. É necessário preencher os Line Edit representados pelos labels (Bairro e Quantidade de Focos).E logo após isso o botão inserir irá atualializar a tabela e classificar o nível de risco de cada bairro cadastrado.
 
 ![](figuras/label.png)
 
+A classificação de risco dos bairros foi  estabelecida em Alto(cor vermelha) para bairros que fossem registrados mais que 50 focos de dengue,Médio(cor azul) para bairros que portassem entre 20 e 50 focos de dengue e para bairros com menos de 20 focos foi atribuido risco Baixo(cor verde).
 
+
+![](figuras/risco.png)
