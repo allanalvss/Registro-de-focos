@@ -25,7 +25,7 @@ float cidade::media_de_focos()
     for(int i=0;i<Cidade.size();i++){
         quants+=Cidade[i].getquantidade();
     }
-    return quants/tam;
+    return (float) quants/tam;
 }
 
 void cidade::EditBairro(int index, QString value)

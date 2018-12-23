@@ -309,7 +309,7 @@ color: rgb(52, 101, 164);</string>
        <item>
         <widget class="QGroupBox" name="gb_highest">
          <property name="title">
-          <string>Maior média</string>
+          <string>Bairro com maior risco</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -340,7 +340,7 @@ color: rgb(52, 101, 164);</string>
        <item>
         <widget class="QGroupBox" name="gb_lowest">
          <property name="title">
-          <string>Menor média</string>
+          <string>Bairro com menor risco</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
