@@ -28,10 +28,16 @@ float cidade::media_de_focos()
     return quants/tam;
 }
 
-void cidade::modify(local teste)
+void cidade::setBairro(int index, QString value)
 {
-  Cidade[0].getbairro()=teste.getbairro();
+    Cidade[index].setbairro(value);
 }
+
+void cidade::setQuants(int index, int num)
+{
+    Cidade[index].setquantidade(num);
+}
+
 
 QString cidade::maior_risco()
 {

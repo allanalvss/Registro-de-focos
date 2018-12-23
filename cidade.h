@@ -15,7 +15,8 @@ public:
     explicit cidade(QObject *parent = nullptr);
     void inserirbairro(const local a);
     float media_de_focos();
-    void modify(local teste);
+    void setBairro(int index,QString value);
+    void setQuants(int index, int num);
     QString maior_risco();
     QString menor_risco();
     local getloc(int i);

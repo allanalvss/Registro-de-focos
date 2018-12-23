@@ -8,7 +8,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     QPixmap pix("/home/allan/Downloads/ids.jpeg");
     ui->lab_print->setPixmap(pix);
-
 }
 
 MainWindow::~MainWindow()
@@ -175,10 +174,44 @@ void MainWindow::on_actionCarregar_dados_triggered()
 void MainWindow::on_tbl_data_cellDoubleClicked(int row, int column)
 {
   if(column==0){
-  local teste;
   QString nome=QInputDialog::getText(this,"Editar","Qual o novo bairro? ", QLineEdit::Normal);
-  jp[row].getbairro()=nome;
+  jp.setBairro(row,nome);
   ui->tbl_data->clearContents();
     ui->tbl_data->setItem(row,column,new QTableWidgetItem(jp[row].getbairro()));
+    ui->tbl_data->setItem(row,1,new QTableWidgetItem(QString::number(jp[row].getquantidade())));
+    QTableWidgetItem *risco=new QTableWidgetItem(jp[row].getrisco());
+    if(jp[row].getrisco()=="Alto"){
+    risco->setTextColor("red");
+    }
+    if(jp[row].getrisco()=="Médio"){
+    risco->setTextColor("blue");
+    }
+    if(jp[row].getrisco()=="Baixo"){
+    risco->setTextColor("green");
+    }
+    ui->tbl_data->setItem(row,2,risco);
+    atualizarEstatisticas();
+    QMessageBox::information(this,"Editar","Dados alterados!");
 }
-}
+  else if(column==1){
+      QString numero=QInputDialog::getText(this,"Editar","Qual o numero atual de focos?", QLineEdit::Normal);
+      jp.setQuants(row,numero.toInt());
+      ui->tbl_data->clearContents();
+        ui->tbl_data->setItem(row,0,new QTableWidgetItem(jp[row].getbairro()));
+        ui->tbl_data->setItem(row,1,new QTableWidgetItem(QString::number(jp[row].getquantidade())));
+        QTableWidgetItem *risco=new QTableWidgetItem(jp[row].getrisco());
+        if(jp[row].getrisco()=="Alto"){
+        risco->setTextColor("red");
+        }
+        if(jp[row].getrisco()=="Médio"){
+        risco->setTextColor("blue");
+        }
+        if(jp[row].getrisco()=="Baixo"){
+        risco->setTextColor("green");
+        }
+        ui->tbl_data->setItem(row,2,risco);
+        atualizarEstatisticas();
+        QMessageBox::information(this,"Editar","Dados alterados!");
+    }
+  }
+
