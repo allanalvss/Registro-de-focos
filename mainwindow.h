@@ -47,6 +47,8 @@ private slots:
 
     void on_tbl_data_cellDoubleClicked(int row, int column);
 
+    void on_reset_button_clicked();
+
 private:
     Ui::MainWindow *ui;
     void insert_cadastro(local loc,int row);

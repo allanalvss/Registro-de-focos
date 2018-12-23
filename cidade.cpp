@@ -28,12 +28,12 @@ float cidade::media_de_focos()
     return quants/tam;
 }
 
-void cidade::setBairro(int index, QString value)
+void cidade::EditBairro(int index, QString value)
 {
     Cidade[index].setbairro(value);
 }
 
-void cidade::setQuants(int index, int num)
+void cidade::EditQuants(int index, int num)
 {
     Cidade[index].setquantidade(num);
 }

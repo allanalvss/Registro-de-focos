@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QPixmap pix("/home/allan/Downloads/ids.jpeg");
+    QPixmap pix(":/pic/ids.jpeg");
     ui->lab_print->setPixmap(pix);
 }
 
@@ -174,44 +174,59 @@ void MainWindow::on_actionCarregar_dados_triggered()
 void MainWindow::on_tbl_data_cellDoubleClicked(int row, int column)
 {
   if(column==0){
+  int qnt_row = ui->tbl_data->rowCount();
   QString nome=QInputDialog::getText(this,"Editar","Qual o novo bairro? ", QLineEdit::Normal);
-  jp.setBairro(row,nome);
+  jp.EditBairro(row,nome);
   ui->tbl_data->clearContents();
-    ui->tbl_data->setItem(row,column,new QTableWidgetItem(jp[row].getbairro()));
-    ui->tbl_data->setItem(row,1,new QTableWidgetItem(QString::number(jp[row].getquantidade())));
-    QTableWidgetItem *risco=new QTableWidgetItem(jp[row].getrisco());
-    if(jp[row].getrisco()=="Alto"){
+  for(int i=0;i<qnt_row;i++){
+    ui->tbl_data->setItem(i,column,new QTableWidgetItem(jp[i].getbairro()));
+    ui->tbl_data->setItem(i,1,new QTableWidgetItem(QString::number(jp[i].getquantidade())));
+    QTableWidgetItem *risco=new QTableWidgetItem(jp[i].getrisco());
+    if(jp[i].getrisco()=="Alto"){
     risco->setTextColor("red");
     }
-    if(jp[row].getrisco()=="Médio"){
+    if(jp[i].getrisco()=="Médio"){
     risco->setTextColor("blue");
     }
-    if(jp[row].getrisco()=="Baixo"){
+    if(jp[i].getrisco()=="Baixo"){
     risco->setTextColor("green");
     }
-    ui->tbl_data->setItem(row,2,risco);
+    ui->tbl_data->setItem(i,2,risco);
+  }
     atualizarEstatisticas();
     QMessageBox::information(this,"Editar","Dados alterados!");
 }
   else if(column==1){
+      int qnt_row = ui->tbl_data->rowCount();
       QString numero=QInputDialog::getText(this,"Editar","Qual o numero atual de focos?", QLineEdit::Normal);
-      jp.setQuants(row,numero.toInt());
+      jp.EditQuants(row,numero.toInt());
       ui->tbl_data->clearContents();
-        ui->tbl_data->setItem(row,0,new QTableWidgetItem(jp[row].getbairro()));
-        ui->tbl_data->setItem(row,1,new QTableWidgetItem(QString::number(jp[row].getquantidade())));
-        QTableWidgetItem *risco=new QTableWidgetItem(jp[row].getrisco());
-        if(jp[row].getrisco()=="Alto"){
+      for(int i=0;i<qnt_row;i++){
+        ui->tbl_data->setItem(i,0,new QTableWidgetItem(jp[i].getbairro()));
+        ui->tbl_data->setItem(i,1,new QTableWidgetItem(QString::number(jp[i].getquantidade())));
+        QTableWidgetItem *risco=new QTableWidgetItem(jp[i].getrisco());
+        if(jp[i].getrisco()=="Alto"){
         risco->setTextColor("red");
         }
-        if(jp[row].getrisco()=="Médio"){
+        if(jp[i].getrisco()=="Médio"){
         risco->setTextColor("blue");
         }
-        if(jp[row].getrisco()=="Baixo"){
+        if(jp[i].getrisco()=="Baixo"){
         risco->setTextColor("green");
         }
-        ui->tbl_data->setItem(row,2,risco);
+        ui->tbl_data->setItem(i,2,risco);
+      }
         atualizarEstatisticas();
         QMessageBox::information(this,"Editar","Dados alterados!");
     }
   }
 
+
+void MainWindow::on_reset_button_clicked()
+{
+    int qnt_row = ui->tbl_data->rowCount();
+    for(int i=0;i<qnt_row;i++){
+    ui->tbl_data->removeRow(i);
+    }
+    atualizarEstatisticas();
+}

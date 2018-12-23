@@ -160,14 +160,15 @@
      <widget class="QPushButton" name="ins_button">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>154</y>
+        <x>80</x>
+        <y>150</y>
         <width>121</width>
         <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(32, 74, 135);</string>
+       <string notr="true">color: rgb(32, 74, 135);
+</string>
       </property>
       <property name="text">
        <string>Inserir</string>
@@ -200,7 +201,7 @@
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>140</x>
+        <x>200</x>
         <y>20</y>
         <width>151</width>
         <height>17</height>
@@ -241,6 +242,22 @@ color: rgb(52, 101, 164);</string>
       </property>
       <property name="text">
        <string>Ordenar por quantidade</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="reset_button">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>150</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(32, 74, 135);</string>
+      </property>
+      <property name="text">
+       <string>Remover linha</string>
       </property>
      </widget>
     </widget>
