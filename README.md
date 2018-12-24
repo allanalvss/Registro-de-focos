@@ -43,7 +43,7 @@ Ao acessar a opção do "Menu" na borda superior da interface o usuário tem a o
 
 # Modificar Dados
 
-Por fim.caso o usuário deseje alterar os dados direto na tabela da aplicação, basta clicar duas vezes na célula desejada e a aplicação irá perguntar ao usuário qual a mudança desejada e em seguida realizará as mudanças desejadas.Entretanto, as mudanças só podem ser feitas com os bairros e a quantidade de focos, já que o terceiro parâmetro é gerado a partir dos anteriores.
+Por fim,caso o usuário deseje alterar os dados direto na tabela da aplicação, basta clicar duas vezes na célula desejada e a aplicação irá perguntar ao usuário qual a mudança desejada e em seguida realizará as mudanças desejadas.Entretanto, as mudanças só podem ser feitas com os bairros e a quantidade de focos, já que o terceiro parâmetro é gerado a partir dos anteriores.
 
 ![](figuras/cel.png)
 
