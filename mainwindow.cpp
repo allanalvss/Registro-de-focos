@@ -147,7 +147,7 @@ void MainWindow::on_actionSalvar_triggered()
 
 void MainWindow::on_actionCarregar_dados_triggered()
 {
-    QString nomeArquivo = QFileDialog::getOpenFileName(this,"Lista de Alunos","","Texto Puro(*.txt);;Arquivos Separado por Vírgulas(*.csv)");
+    QString nomeArquivo = QFileDialog::getOpenFileName(this,"Cadastro","","Texto Puro(*.txt);;Arquivos Separado por Vírgulas(*.csv)");
 
         if(gerador::carregar_cadastro(nomeArquivo,jp)){
 
@@ -158,10 +158,11 @@ void MainWindow::on_actionCarregar_dados_triggered()
                     ui->tbl_data->insertRow(i);
 
                 insert_cadastro(jp[i],i);
+                  QMessageBox::information(this, "Carregar cadastro","Dados carregados com sucesso!");
             }
 
         }else{
-            QMessageBox::information(this, "Carregar turma","Não foi possível carregar os dados");
+            QMessageBox::information(this, "Carregar cadastro","Não foi possível carregar os dados");
         }
         atualizarEstatisticas();
 
