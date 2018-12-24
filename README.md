@@ -19,3 +19,10 @@ A classificação de risco dos bairros foi  estabelecida em Alto(cor vermelha) p
 
 
 ![](figuras/risco.png)
+
+
+# Ordenação dos dados
+
+Na aplicação foram estabelecidos dois tipos de ordenação : a opção de ordenar por ordem alfabética(Push Button- Ordenar por nome) ou ordenar pela quantidade de focos encontrados( do menor para maior)-(Push Button - Ordenar por quantidade).
+
+![](figuras/ord1.png)
