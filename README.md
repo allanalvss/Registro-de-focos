@@ -37,7 +37,9 @@ Ao acessar a opção do "Menu" na borda superior da interface o usuário tem a o
 
 ![](figuras/carg.png)
 
-![](figuras/save2.png)                               
+![](figuras/save2.png)
+
+![](figuras/car1.png)
 
 # Modificar Dados
 
